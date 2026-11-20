@@ -1,0 +1,75 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug K1986BE8T (CMSIS-DAP / OpenOCD)",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "request": "launch",
+            "executable": "${workspaceFolder}/build/${config:PROJECT_NAME}.elf",
+            "cwd": "${workspaceFolder}",
+            "device": "Cortex-M4",
+            "interface": "jtag",
+            "serverpath": "${config:OPENOCD_EXECUTABLE}",
+            "searchDir": [
+                "${workspaceFolder}/openocd"
+            ],
+            "configFiles": [
+                "cmsis-dap.cfg",
+                "K1986BE8T.cfg"
+            ],
+            "svdFile": "${workspaceFolder}/svd/K1986VE8T/MDR1986VE8.svd",
+            "preLaunchTask": "Build",
+            "runToEntryPoint": "main",
+            "overrideLaunchCommands": [
+                "monitor reset halt",
+                "monitor mww 0xE000ED08 0x20005000",
+                "load",
+                "set $sp = *((uint32_t*)0x20005000)",
+                "set $pc = *((uint32_t*)0x20005004)"
+            ],
+            "overrideRestartCommands": [
+                "monitor reset halt",
+                "monitor mww 0xE000ED08 0x20005000",
+                "load",
+                "set $sp = *((uint32_t*)0x20005000)",
+                "set $pc = *((uint32_t*)0x20005004)"
+            ]
+        },
+        {
+            "name": "Debug K1986BE8T (J-Link / OpenOCD)",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "request": "launch",
+            "executable": "${workspaceFolder}/build/${config:PROJECT_NAME}.elf",
+            "cwd": "${workspaceFolder}",
+            "device": "Cortex-M4",
+            "interface": "jtag",
+            "serverpath": "${config:OPENOCD_EXECUTABLE}",
+            "searchDir": [
+                "${workspaceFolder}/openocd"
+            ],
+            "configFiles": [
+                "jlink.cfg",
+                "K1986BE8T.cfg"
+            ],
+            "svdFile": "${workspaceFolder}/svd/K1986VE8T/MDR1986VE8.svd",
+            "preLaunchTask": "Build",
+            "runToEntryPoint": "main",
+            "overrideLaunchCommands": [
+                "monitor reset halt",
+                "monitor mww 0xE000ED08 0x20005000",
+                "load",
+                "set $sp = *((uint32_t*)0x20005000)",
+                "set $pc = *((uint32_t*)0x20005004)"
+            ],
+            "overrideRestartCommands": [
+                "monitor reset halt",
+                "monitor mww 0xE000ED08 0x20005000",
+                "load",
+                "set $sp = *((uint32_t*)0x20005000)",
+                "set $pc = *((uint32_t*)0x20005004)"
+            ]
+        }
+    ]
+}

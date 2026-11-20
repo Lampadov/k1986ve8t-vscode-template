@@ -1,0 +1,23 @@
+---
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+BasedOnStyle:  WebKit
+AlignConsecutiveAssignments: true
+AlignAfterOpenBracket: Align
+AlignArrayOfStructures: Left
+AlignConsecutiveBitFields: true
+AlignConsecutiveMacros:
+    Enabled: true
+    AcrossEmptyLines: true
+AlignOperands: true
+AlignTrailingComments: true
+BraceWrapping:
+AfterCaseLabel: true
+AfterEnum:       true
+AfterFunction:   true
+AfterStruct:     false
+SplitEmptyFunction: false
+SortIncludes:    false
+Language: Cpp
+IndentCaseLabels: true
+BreakBeforeBinaryOperators: None
+AlignConsecutiveDeclarations: true

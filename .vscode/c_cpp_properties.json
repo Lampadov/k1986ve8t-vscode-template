@@ -1,0 +1,27 @@
+{
+    "version": 4,
+    "configurations": [
+        {
+            "name": "K1986BE8T",
+            "compilerPath": "arm-none-eabi-gcc",
+            "compilerArgs": [
+                "-mcpu=cortex-m4",
+                "-mthumb",
+                "-mfloat-abi=hard",
+                "-mfpu=fpv4-sp-d16"
+            ],
+            "cStandard": "gnu11",
+            "intelliSenseMode": "gcc-arm",
+            "includePath": [
+                "${workspaceFolder}/Library",
+                "${workspaceFolder}/Library/inc",
+                "${workspaceFolder}/Library/src",
+                "${workspaceFolder}/src"
+            ],
+            "defines": [
+                "USE_K1986BE8T",
+                "__FPU_PRESENT=1U"
+            ]
+        }
+    ]
+}
