@@ -30,7 +30,7 @@
 
 Сборка из чистого клона проверена под Linux с xPack Arm GCC 13.3.1. В исходных файлах поддержки есть предупреждения компилятора. Подключение отладчиков и запуск на плате при подготовке репозитория не проверялись.
 
-Автор статьи — **Илья Лампадов**. Линкерный скрипт сохраняет уведомление Arm и лицензию [Apache-2.0](LICENSES/Apache-2.0.txt). В статье есть ссылки на установщики, параметры отладки и снимки экрана. [Статья и исходный шаблон на Milandr][article].
+Статью написал **Илья Лампадов**. Линкерный скрипт сохраняет уведомление Arm и лицензию [Apache-2.0](LICENSES/Apache-2.0.txt). В статье есть ссылки на установщики, параметры отладки и снимки экрана. [Статья и исходный шаблон на Milandr][article].
 
 [article]: https://support.milandr.ru/base/primenenie/programmirovanie-32-razryadnykh-mk/nachalo-raboty/65986/
 [archive]: https://support.milandr.ru/upload/iblock/099/0yzqc1soot4rlkdjab21g239x9yyucvh/K1986BE8T_Template.zip
